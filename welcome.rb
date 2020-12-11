@@ -1,39 +1,21 @@
-# Welcome Page for the fortune telling App
-
-puts "
-                   .---.
-  *              .'_..._'.   FORTUNE
-    *           .''_   _''.    TELLER
-  * *          .' :  '  : '.
-   *          .'_.-'_~_'-._'.
-             .':     '     : '.
-            .'  l l     l l  '.
-           .'    l l   l l    '.
-     ____________'''` '```____________
-    /              .''.               l
-   /  THE ORACLE  (  ` ) WELCOME'S YOU l
-  /               .'..'.                l
- /                '----'                 l
-/_________________________________________l
-  \  /'--'                       '--'\  /
-   ||                                 ||
-   ||                                 ||
-  _||_                               _||_
-  '--'                               '--'  "
-
-
-class OracleOptions
-    # shows the options available within the App
-    def show_options
-        choices = %w("yes or No Question", "Broad guidance", "Mystery oracle reading", "Exit")
-        prompt.multi_select("Select option", choices)
+    
+    def show_options(promptb)
+        choices = [
+            {name: "yes or no question", value: 1},
+            {name: "broad guidance", value: 2},
+            {name: "exit", value: 3}, 
+            {name: "mystery oracle", value: 4}
+        ]
+        promptb.select("Choose your destiny?", choices)
         # =>
-        #
-        # Select option? (Use ↑/↓ arrow keys, press Space to select and Enter to finish)"
-        # ‣ ⬡ yes or No Question
-        #   ⬡ Broad guidance
-        #   ⬡ Mystery oracle reading
-        #   ⬡ Exit
+        # What size? (Press ↑/↓ arrow to move and Enter to select)
+        # ‣ yes or no question
+        #   broad guidance
+        #   exit
+        #   mystery oracle
     end
-end 
+    
 
+#Questions - how to then put the choices into inputs that I can create an action from ? Jarrod? 
+
+#"yes or No Question", "Broad guidance", "Mystery oracle reading", "Exit"
