@@ -1,12 +1,39 @@
 # Welcome Page for the fortune telling App
-class Welcome
+
+puts "
+                   .---.
+  *              .'_..._'.   FORTUNE
+    *           .''_   _''.    TELLER
+  * *          .' :  '  : '.
+   *          .'_.-'_~_'-._'.
+             .':     '     : '.
+            .'  l l     l l  '.
+           .'    l l   l l    '.
+     ____________'''` '```____________
+    /              .''.               l
+   /  THE ORACLE  (  ` ) WELCOME'S YOU l
+  /               .'..'.                l
+ /                '----'                 l
+/_________________________________________l
+  \  /'--'                       '--'\  /
+   ||                                 ||
+   ||                                 ||
+  _||_                               _||_
+  '--'                               '--'  "
+
+
+class OracleOptions
     # shows the options available within the App
     def show_options
-        puts "\nWelcome to the Oracle!" 
-        puts "Do you come with a specific burning question that you want a 'yes' or 'no' answer to? Or do you have a more broad area of life where you want to receive guidance?"
-        puts "Type 1 for Yes or No Qu"
-        puts "Type 2 for broad guidance"
-        puts "Type 3 for a mystery oracle reading"
-        puts "Type 4 to Exit"
+        choices = %w("yes or No Question", "Broad guidance", "Mystery oracle reading", "Exit")
+        prompt.multi_select("Select option", choices)
+        # =>
+        #
+        # Select option? (Use ↑/↓ arrow keys, press Space to select and Enter to finish)"
+        # ‣ ⬡ yes or No Question
+        #   ⬡ Broad guidance
+        #   ⬡ Mystery oracle reading
+        #   ⬡ Exit
     end
 end 
+
