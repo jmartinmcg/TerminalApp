@@ -2,15 +2,13 @@
     def show_options(promptb)
         choices = [
             {name: "yes or no question", value: 1},
-            {name: "broad guidance", value: 2},
-            {name: "exit", value: 3}, 
-            {name: "mystery oracle", value: 4}
+            {name: "exit", value: 2}, 
+            {name: "mystery oracle", value: 3}
         ]
         promptb.select("Choose your destiny?", choices)
         # =>
         # What size? (Press ↑/↓ arrow to move and Enter to select)
         # ‣ yes or no question
-        #   broad guidance
         #   exit
         #   mystery oracle
     end

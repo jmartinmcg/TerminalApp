@@ -52,17 +52,20 @@ sleep (1)
             puts answers.sample
             sleep(1.4)
             show_options(prompt)
-        # # when 2
-        #     broad_qu()
-        when 3
+        when 2
             puts "thank you for visiting.. I hope this has offered you some guidance to move forward"
             exit(0)   
-        # when 4
-        #     mystery_oracle()
+        when 3
+            sleep(1.1)
+                msg = "The oracle is thinking"
+                 6.times do
+                 print "\r#{ msg}"
+                sleep 0.5
+                print "\r#{ ' ' * msg.size }" # Send return and however many spaces are needed.
+                sleep 0.5
+                end
+            answers = ["Be extra alert today and you will find an answer in nature to your questions", "don't prioritise your schedule, schedule your priorities", "Now is the time to take that leap of faith you have been thinking about", "it's time to tell that person the thing you have been holding back from saying", "connect with nature today, nature has a message for you"]
+            puts answers.sample
+            sleep(1.4)
+            show_options(prompt)
         end
-input
-  
-
-
-# # # def yes_no
-
