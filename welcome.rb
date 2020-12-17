@@ -3,7 +3,8 @@
         choices = [
             {name: "yes or no question", value: 1},
             {name: "exit", value: 2}, 
-            {name: "mystery oracle reading", value: 3}
+            {name: "mystery oracle reading", value: 3}, 
+            {name: "pick a number", value: 4}
         ]
         promptb.select("Choose your destiny?", choices)
         # =>
@@ -11,6 +12,7 @@
         # ‣ yes or no question
         #   exit
         #   mystery oracle reading
+        #   pick a number 
     end
     
 

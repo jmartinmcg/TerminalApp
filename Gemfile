@@ -10,4 +10,4 @@ gem "colorize", "~> 0.8.1"
 
 gem "tty-prompt", "~> 0.23.0"
 
-gem "asciiart", "~> 0.0.9"
+gem "artii", "~> 2.1"
