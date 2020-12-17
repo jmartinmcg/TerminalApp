@@ -5,30 +5,30 @@ def pick_number
 
     case n
         when 26..100
-        sleep (0.6)
-        system("clear")
-        a = Artii::Base.new
-        a.asciify(fortune[0])
-        puts a.asciify(fortune[0])
+            sleep (0.6)
+            system("clear")
+            a = Artii::Base.new
+            a.asciify(fortune[0])
+            puts a.asciify(fortune[0])
         when 16..25 
-        system("clear")
-        sleep (0.6)
-        a = Artii::Base.new
-        a.asciify(fortune[1])
-        puts a.asciify(fortune[1])
+            system("clear")
+            sleep (0.6)
+            a = Artii::Base.new
+            a.asciify(fortune[1])
+            puts a.asciify(fortune[1])
         when 9..15
-        sleep (0.6)
-        system("clear")
-        a = Artii::Base.new
-        a.asciify(fortune[2])
-        puts a.asciify(fortune[2])
+            sleep (0.6)
+            system("clear")
+            a = Artii::Base.new
+            a.asciify(fortune[2])
+            puts a.asciify(fortune[2])
         when 1..10 
-        sleep (0.6)
-        system("clear")
-        a = Artii::Base.new
-        a.asciify(fortune[3])
-        puts a.asciify(fortune[3])
-    else 
-        puts "There is an error. Is it fate? Or, will you enter a number from 1 to 100 to see your fortune?"
+            sleep (0.6)
+            system("clear")
+            a = Artii::Base.new
+            a.asciify(fortune[3])
+            puts a.asciify(fortune[3])
+        else 
+            puts "There is an error. Is it fate? Or, will you enter a number from 1 to 100 to see your fortune?"
     end 
 end
