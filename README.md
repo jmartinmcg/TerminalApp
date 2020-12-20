@@ -49,14 +49,33 @@ The target audience is split into those people seriously using the information r
 
 ## List of Features included in the application
 
-1. 
+1. ##### 'Pick a number' fortune telling 
+This feature allows users to type a number from 1 to 100 and the program will display a fortune based on the user input. If the user input is not a number from 1 to 100 an error message will display. I use a separate .rb file for the method to run this feature. I then call on it in the main .rb file (index.rb) in the prompt ruby gem under the option for 'pick a number'. I use a ```case``` in the method and a ```when``` loop. The error handling is done with two parts as seen in the code below. A ```when " "``` displays an error message for if the user makes no entry and just hits enter. There is also an error message for any other entry that is not 1..100. I created the ```when " "``` because in my testing ```else```clause did not pick up when I typed in an empty strings and pressed enter. 
+<img src="docs/errorhandling.png">
+I used this instead of ```rescue``` error handling because i liked the layout of this more. It aesthetically worked with my App. I customised the error message to give it a mystical theme. 
 
+2. ##### Prompt gem for scroll through list of user options 
+This feature displays the App options  in a scroll through menu in which the user can use the up or down arrows to scroll through and the Enter key to select an option. This is aesthetically pleasing, user friendly, and also minimises errors by reducing user input which reduces incorrect user entries. 
+<img src="docs/Screen Shot 2020-12-20 at 6.38.33 pm.png">
+This feature creates a method that calls in the Ruby TTY-prompt gem. Then I ran a case to run the user choices. Inside the ```def``` method there is an input variable and this is a local variable which is unaccessible outside the method. I.e it cannot be called on outside the method, unless it was changed to a global variable.
+
+I had a development issue with the loop in that once one option had been created it would re-display the options but when you chose an option in the prompt it would exit you from the game. I created a ```while``` loop for the prompt options that resolved this issue for me, as displayed below.  
+<img src="docs/Screen Shot 2020-12-20 at 6.46.55 pm.png">
+
+3. ##### Waiting time after user input
+
+The App's default is to display the fortune almost instantly once the user chooses an option. It is more engaging for the user if they have to wait a little bit, an amount of time that could feel similar to a human interaction. I created this by adding ```sleep``` and also creating a flashing display saying "the oracle is thinking". I created the flashing effect by displaying and then removing the text multiple times, as seen in the code snippet below. 
+
+<img src="docs/Screen Shot 2020-12-20 at 6.49.34 pm.png">
 
 ## Control flow diagram 
-- TODO: insert the finished control flow diagram 
+<img src="docs/flowchart.png">
 
 ## Implementation plan 
-Trello or Jira 
+I used Trello for my implementation plan. I broke it down into steps following the flowchart. A screen grab of some of the steps is below along with a link to my Trello project page.
+
+<img src="docs/Trello.png">
+https://trello.com/b/uovgQo4y/jackmartinterminalapp
 
 ## How to install and use 
 
@@ -78,8 +97,7 @@ To install and run
 References 
 ###### Ascii Art sourced from https://ascii.co.uk/art/fortune
 
+IBIS, December 2019, Psychic Services Industry in the US, IBIS World, viewed 14 December 2020, https://www.ibisworld.com/united-states/market-research-reports/psychic-services-industry/
 
-
-Psychic Services Industry in the US, December 2019
-
-https://www.ibisworld.com/united-states/market-research-reports/psychic-services-industry/
+###### Software Testing 
+I was unable to understand how to use rspec. I watched all the videos and did looks of googling but could not understand how to make it work. I have left my examples of how i tried in the spec folder. 
