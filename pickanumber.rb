@@ -28,7 +28,10 @@ def pick_number
             a = Artii::Base.new
             a.asciify(fortune[3])
             puts a.asciify(fortune[3])
-        else 
-            puts "There is an error. Is it fate? Or, will you enter a number from 1 to 100 to see your fortune?"
+        when " "
+            puts "There is an error. You just clicked enter. Is it fate? Or will you choose 'pick a number' again and enter a number from 1 to 100 to see your fortune?"
+        else # Any entry that is not a number from 1 to 100 will catch here & print an error message 
+            puts "There is an error. Is it fate? Or will you choose 'pick a number' again and enter a number from 1 to 100 to see your fortune?"
     end 
 end
+
