@@ -4,6 +4,10 @@ require "tty-prompt"
 require 'colorized_string'
 require 'artii'
 
+def gets
+    STDIN.gets
+  end
+
 prompt = TTY::Prompt.new
 
 system("clear")
@@ -21,7 +25,7 @@ def welcome_image
            .'    l l   l l    '.            
      ____________'''` '```____________      
     /              .''.               l     
-   /  THE ORACLE  (  ` ) WELCOME'S YOU l    
+   /  THE ORACLE  (  ` ) WELCOMES YOU  l    
   /               .'..'.                l   
  /                '----'                 l  
 /_________________________________________l 
