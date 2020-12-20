@@ -2,7 +2,7 @@ require '../pickanumber.rb'
 
 describe 'pickanumber.rb' do 
     it 'gets a number from the user and picks a fortune using that number' do 
-        expect(hello()).to eq("hello world")
+        if n==100 expect puts a.asciify(fortune[0])
     end
 
 end
